@@ -1,0 +1,89 @@
+/* Dropdown.module.css */
+
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  font-family: Arial, sans-serif;
+}
+
+/* We want to position the label on the border of the dropdown */
+/* so we need to give it absolute positioning  and set its top/left properties */
+.dropdownLabel {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  color: #007bff;
+  padding: 0 5px;
+}
+
+/* basuc properties for the button that opens the dropdown */
+.dropdownButton,
+.selectAllButton {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  background-color: #fff;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* these control the behaviour of the arrow next to the text */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* cosmetic, to flip the arrow upside down whenever dropdown is open or closed */
+.dropdownArrow {
+  transition: transform 0.3s ease;
+}
+.dropdownArrow.up {
+  transform: rotate(180deg);
+}
+
+.dropdownList {
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid #007bff;
+  /* scrollable property of the dropdown */
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdownListItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdownListItem label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-right: 8px;
+}
+
+/* Hover property when an option is hovered over */
+.dropdownListItem:hover {
+  background-color: #b3d9ff;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Hover property when an option is hovered over */
+.dropdownListItem.selected {
+  background-color: #b3d9ff;
+  color: #333;
+  font-weight: bold;
+}

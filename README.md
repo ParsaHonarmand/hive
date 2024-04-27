@@ -36,6 +36,9 @@ bun dev
 
 ## Usage
 
+There are 2 sample JSON files provided in /data called names.json and ages.json
+You can go into pages.js and uncomment, comment, or call the Dropdown component with your own list of options.
+
 ### Single-Select Dropdown
 
 ```bash
